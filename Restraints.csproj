@@ -58,6 +58,7 @@
     <Compile Include="Src\JobDriver_Free.cs" />
     <Compile Include="Src\JobDriver_Restrain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\RestraintsDefs.cs" />
     <Compile Include="Src\RestraintsMod.cs" />
     <Compile Include="Src\Utils.cs" />
   </ItemGroup>

@@ -37,11 +37,11 @@ namespace Restraints
             {
                 initAction = () =>
                 {
-                    Hediff hediff = Target.health.hediffSet.hediffs.Find(h => h.def == RestraintsMod.RestraintsHediff);
+                    Hediff hediff = Target.health.hediffSet.hediffs.Find(h => h.def == RestraintsDefs.RestraintsHediff);
                     if (hediff != null)
                     {
                         Target.health.RemoveHediff(hediff);
-                        Target.needs.mood.thoughts.memories.TryGainMemory(RestraintsMod.RestrainsMemory);
+                        Target.needs.mood.thoughts.memories.TryGainMemory(RestraintsDefs.RestrainsMemory);
                     }
                 } 
             };

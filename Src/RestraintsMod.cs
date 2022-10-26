@@ -12,10 +12,5 @@ namespace Restraints
             harmony.PatchAll();
             Log.Message("Restraints loaded");
         }
-
-        internal static HediffDef RestraintsHediff => HediffDef.Named("bdew_restraints");
-        internal static JobDef RestrainJob => DefDatabase<JobDef>.GetNamed("bdew_restraints_add");
-        internal static JobDef FreeJob => DefDatabase<JobDef>.GetNamed("bdew_restraints_free");
-        internal static ThoughtDef RestrainsMemory => ThoughtDef.Named("bdew_restraints_memory");
     }
 }

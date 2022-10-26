@@ -61,7 +61,7 @@ namespace Restraints
                         }
                     }
 
-                    Target.health.AddHediff(RestraintsMod.RestraintsHediff);
+                    Target.health.AddHediff(RestraintsDefs.RestraintsHediff);
                     Steel.Destroy();
                 }
             };

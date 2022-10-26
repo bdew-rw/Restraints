@@ -22,9 +22,9 @@ namespace Restraints
                 {
                     if (pawn.CanReach(dest, PathEndMode.ClosestTouch, Danger.Deadly))
                     {
-                        if (target.health.hediffSet.hediffs.Exists(h => h.def == RestraintsMod.RestraintsHediff))
+                        if (target.health.hediffSet.hediffs.Exists(h => h.def == RestraintsDefs.RestraintsHediff))
                         {
-                            __result.Add(new FloatMenuOption("Restraints.Remove".Translate(target), () => { pawn.jobs.TryTakeOrderedJob(new Job(RestraintsMod.FreeJob, target)); }));
+                            __result.Add(new FloatMenuOption("Restraints.Remove".Translate(target), () => { pawn.jobs.TryTakeOrderedJob(new Job(RestraintsDefs.FreeJob, target)); }));
                         }
                         else
                         {
@@ -33,7 +33,7 @@ namespace Restraints
                                 Thing steel = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(ThingDefOf.Steel), PathEndMode.OnCell, TraverseParms.For(pawn));
                                 if (steel != null)
                                 {
-                                    pawn.jobs.TryTakeOrderedJob(new Job(RestraintsMod.RestrainJob, target, steel));
+                                    pawn.jobs.TryTakeOrderedJob(new Job(RestraintsDefs.RestrainJob, target, steel));
                                 }
                                 else
                                 {
