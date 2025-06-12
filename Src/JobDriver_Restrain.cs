@@ -2,17 +2,15 @@
 using RimWorld;
 using Verse;
 using Verse.AI;
-using Verse.AI.Group;
 
 namespace Restraints
 {
-    // ReSharper disable once InconsistentNaming
     public class JobDriver_Restrain : JobDriver
     {
         private const TargetIndex PawnInd = TargetIndex.A;
         private const TargetIndex SteelInd = TargetIndex.B;
 
-        private Pawn Target => (Pawn) job.GetTarget(PawnInd).Thing;
+        private Pawn Target => (Pawn)job.GetTarget(PawnInd).Thing;
 
         private Thing Steel => job.GetTarget(SteelInd).Thing;
 
@@ -52,7 +50,7 @@ namespace Restraints
             {
                 initAction = () =>
                 {
-                    if (!Target.Downed && Rand.Value > 0.3)
+                    if (!Target.Downed && Rand.Value > RestraintsSettings.RestraintBerserkChance)
                     {
                         if (Target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk))
                         {

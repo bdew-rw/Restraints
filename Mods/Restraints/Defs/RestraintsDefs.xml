@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <JobDef>
         <defName>bdew_restraints_add</defName>
@@ -30,7 +30,7 @@
                 </capMods>
             </li>
         </stages>
-	<description>Has been restrained and is unable to move.</description>
+        <description>Has been restrained and is unable to move.</description>
     </HediffDef>
 
     <ThoughtDef>

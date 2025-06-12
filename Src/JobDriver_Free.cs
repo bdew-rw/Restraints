@@ -2,19 +2,16 @@
 using RimWorld;
 using Verse;
 using Verse.AI;
-using Verse.AI.Group;
 
 namespace Restraints
 {
-    // ReSharper disable once InconsistentNaming
-    // ReSharper disable once UnusedMember.Global
     public class JobDriver_RemoveRestraints : JobDriver
     {
         private const TargetIndex PawnInd = TargetIndex.A;
 
-        private Pawn Target => (Pawn) job.GetTarget(PawnInd).Thing;
+        private Pawn Target => (Pawn)job.GetTarget(PawnInd).Thing;
 
-        
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return pawn.Reserve(Target, job, 1, -1, null, errorOnFailed);
@@ -43,7 +40,7 @@ namespace Restraints
                         Target.health.RemoveHediff(hediff);
                         Target.needs.mood.thoughts.memories.TryGainMemory(RestraintsDefs.RestrainsMemory);
                     }
-                } 
+                }
             };
         }
     }
