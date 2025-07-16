@@ -33,7 +33,7 @@ namespace Restraints
 
         public override bool TargetPawnValid(Pawn pawn, FloatMenuContext context)
         {
-            if (!pawn.IsColonist || (!pawn.IsColonistPlayerControlled && !pawn.IsPrisonerOfColony)) return false;
+            if (!pawn.IsColonist && !pawn.IsPrisonerOfColony && !pawn.IsSlaveOfColony) return false;
             if (pawn.MentalStateDef == MentalStateDefOf.Berserk) return false;
             if (!context.FirstSelectedPawn.CanReach(pawn, PathEndMode.ClosestTouch, Danger.Deadly)) return false;
             return base.TargetPawnValid(pawn, context);
